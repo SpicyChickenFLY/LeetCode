@@ -1,5 +1,5 @@
 #include <iostream>
-using namespcae std;
+using namespace std;
 
 class Solution {
 	public:
