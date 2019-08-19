@@ -1,1 +1,5 @@
 .vscode/
+
+*.class
+*.exe
+*.obj
