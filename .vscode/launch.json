@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - ReorderList",
+            "request": "launch",
+            "mainClass": "ReorderList",
+            "projectName": "LeetCode_abe935fe"
+        },
+        {
             "name": "Go: Launch file",
             "type": "go",
             "request": "launch",
