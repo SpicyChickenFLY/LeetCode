@@ -20,6 +20,20 @@ class Solution {
         System.out.println("root:" + root.val + ", left:" + left + ", right:" + right);
         return ( left < right ? left : right ) + 1;
     }
+
+    // Best: 100.00%
+    public int minDepth1(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left == null) {
+            return 1 + minDepth(root.right);
+        }
+        if (root.right == null) {
+            return 1 + minDepth(root.left);
+        }
+        return 1 + Integer.min(minDepth(root.left), minDepth(root.right));
+    }
 }
 
 public class MinimumDepthOfBinaryTree {
