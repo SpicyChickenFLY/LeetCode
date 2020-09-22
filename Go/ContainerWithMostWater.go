@@ -21,28 +21,28 @@ func max(a, b int) int {
 func maxArea(heights []int) int {
 	left := 0
 	right := len(heights) - 1
-	max_v := 0
+	maxV := 0
 	for left < right {
 		fmt.Println(left, right)
-		height :=  min(heights[left], heights[right])
-		max_v = max(max_v, height * (right - left))
-		for (height >= heights[left] && left < right) {
-			left += 1
+		height := min(heights[left], heights[right])
+		maxV = max(maxV, height*(right-left))
+		for height >= heights[left] && left < right {
+			left++
 		}
-		for (height >= heights[right] && left < right ) {
-			right -= 1
+		for height >= heights[right] && left < right {
+			right--
 		}
-		
+
 	}
-	return max_v
+	return maxV
 }
 
 func main() {
-	testCases := [][]int {
-		{1,8,6,2,5,4,8,3,7},
-	} 
+	testCases := [][]int{
+		{1, 8, 6, 2, 5, 4, 8, 3, 7},
+	}
 	for _, testCase := range testCases {
 		result := maxArea(testCase)
 		fmt.Println(testCase, result)
-	} 
+	}
 }
